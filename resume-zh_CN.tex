@@ -50,12 +50,13 @@
 \begin{onehalfspacing}
   中北信息小程序后端，提供各类查询 API，https://github.com/Dreace/NUC-Information-Backend
   \begin{itemize}
-    \item 最高每月 API 调用超过 150 万次，单日调用超过 25 万次
+    \item 最高每月 API 调用超过 180 万次，单日调用超过 27 万次
+    \item API 粒度权限、缓存控制，可通过装饰器快速拓展功能
     \item 通过模拟登录，解析 HTML 等抓取信息
     \item API 参数签名鉴权，并实现调用限流
     \item 分模块自动加载，部分 API 启动加载失败不影响其他模块
     \item 自动通过 GitHub 仓库代码构建 Docker 镜像，并自动更新已部署容器
-    \item 使用消息队列将部分耗时错做异步执行
+    \item 使用消息队列将部分耗时操作异步执行
     \item Web 框架选用 Flask，WSGI 选用 pywsgi，数据库选用 MySQL 并使用连接池提高性能，NoSQL 数据库选用 Redis\
           作为缓存，消息队列选用 RabbitMQ
   \end{itemize}
@@ -68,6 +69,7 @@
   \begin{itemize}
     \item 提供成绩、课程表、图书馆藏书等信息查询服务
     \item 累计用户超过 4 万，最高 DAU 1.5 万，MAU 2.2 万
+    \item 网络请求、错误集中处理，个页面用户体验高度一致
   \end{itemize}
 \end{onehalfspacing}
 
@@ -76,7 +78,8 @@
 \begin{onehalfspacing}
   团队内部后台管理系统后端及 Web 页面，使用 Ant Design 模板开发
   \begin{itemize}
-    \item 完善的 JWT 鉴权，大部分 API 遵守 RESTful 风格
+    \item 大部分 API 遵守 RESTful 风格
+    \item 完善的 JWT 鉴权，用户可拥有多个权限，API 也可限制多种权限
     \item 可在浏览器中查看后端实时日志，提供公告、用户权限、Docker 容器（开发中）等管理功能
     \item 后端选用 SQLAlchemy 做 ORM 框架
   \end{itemize}
